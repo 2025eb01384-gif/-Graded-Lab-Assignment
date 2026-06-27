@@ -1,0 +1,82 @@
+Project Workspace Report
+
+Name: Vrati Sagar Surana
+Roll No. : 01384
+
+
+
+1. Directory Structure Created
+
+Command
+
+```bash
+mkdir -p ~/ProjectWorkspace/{Documents,SourceCode,Reports}
+tree ~/ProjectWorkspace
+```
+
+Observation
+
+The `mkdir -p` command created the ProjectWorkspace directory along with the subdirectories Documents, SourceCode, and Reports. The `tree` command displayed the complete directory structure.
+
+
+
+2. File Permissions Before Modification
+
+Command
+
+```bash
+ls -ld ~/ProjectWorkspace
+```
+
+Observation
+
+The `ls -ld` command displayed the initial permissions of the ProjectWorkspace directory. By default, the directory had standard read, write, and execute permissions based on the system's default umask.
+
+
+
+3. File Permissions After Modification
+
+Command
+
+```bash
+chmod 700 ~/ProjectWorkspace
+ls -ld ~/ProjectWorkspace
+```
+
+Observation
+
+The `chmod 700` command changed the directory permissions so that only the owner has read, write, and execute permissions. Other users cannot access the directory.
+
+
+
+4. Ownership Details
+
+Command
+
+```bash
+stat ~/ProjectWorkspace
+```
+
+Observation
+
+The `stat` command displayed detailed information about the directory, including the owner and group. The owner and group were both set to the current user.
+
+
+
+5. Umask Value
+
+Command
+
+```bash
+umask
+```
+
+Observation
+
+The `umask` command displayed the default permission mask used when creating new files and directories. The value determines which permissions are removed from the default settings.
+
+
+
+6. How Permissions Protect Project Data
+
+Linux permissions ensure that only authorized users can access or modify project files. Restricting permissions using `chmod 700` prevents other users from viewing or changing confidential project documents, thereby improving security and protecting sensitive data.
