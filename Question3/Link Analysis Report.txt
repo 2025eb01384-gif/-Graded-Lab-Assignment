@@ -1,0 +1,98 @@
+Link Analysis Report
+
+Name: Vrati Sagar Surana
+Roll No. : 01384
+
+1. Creating the Original File
+
+Command
+
+```bash
+echo "Linux File System Experiment" > original.txt
+```
+
+Observation:
+Created a text file named `original.txt` for the experiment.
+
+
+
+2. Creating a Hard Link
+
+Command
+
+```bash
+ln original.txt hardlink.txt
+```
+
+Observation:
+A hard link named `hardlink.txt` was created. It shares the same inode as the original file.
+
+
+3. Creating a Symbolic Link
+
+Command
+
+```bash
+ln -s original.txt symlink.txt
+```
+
+Observation:
+A symbolic link named `symlink.txt` was created. It stores the pathname of the original file instead of sharing its inode.
+
+
+
+4. Displaying Inode Numbers
+
+Command
+
+```bash
+ls -li
+```
+
+Observation:
+The original file and hard link had the same inode number, while the symbolic link had a different inode number.
+
+
+5. Metadata Collection
+
+Command
+
+```bash
+stat original.txt hardlink.txt symlink.txt
+```
+
+Observation:
+The `stat` command displayed detailed metadata including inode numbers, permissions, ownership, size, and timestamps.
+
+
+
+6. Deleting the Original File
+
+Command
+
+```bash
+rm original.txt
+ls -li
+cat hardlink.txt
+cat symlink.txt
+```
+
+Observation:
+After deleting the original file, the hard link still retained the file contents because it pointed to the same inode. The symbolic link became broken because its target file no longer existed.
+
+
+
+Hard Link vs Symbolic Link
+
+| Hard Link                                            | Symbolic Link                          |
+| ---------------------------------------------------- | -------------------------------------- |
+| Shares the same inode as the original file           | Has its own inode                      |
+| Continues to work after the original file is deleted | Breaks if the original file is deleted |
+| Cannot link directories (normally)                   | Can link files and directories         |
+| Must be on the same filesystem                       | Can point to another filesystem        |
+
+
+
+Conclusion
+
+This experiment demonstrated that hard links share the same inode and remain functional even after the original file is deleted. Symbolic links use a pathname to reference the original file and become invalid when the target file is removed. Understanding these differences is important for effective file management in Linux.
