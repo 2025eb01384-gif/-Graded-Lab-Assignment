@@ -1,0 +1,76 @@
+Storage Health Assessment Report
+
+Name: Vrati Sagar Surana
+Roll No.:01384
+
+
+
+1. Available Storage Devices
+
+Command
+
+```bash
+lsblk
+```
+
+Observation:
+The `lsblk` command displayed all storage devices, partitions, and their mount points. It provides a clear overview of the system's storage layout.
+
+
+
+2. Mounted File Systems
+
+Command
+
+```bash
+df -h
+```
+
+Observation:
+The `df -h` command displayed all mounted file systems along with their total size, used space, available space, and mount locations in a human-readable format.
+
+
+
+3. Disk Usage Statistics
+
+Command
+
+```bash
+du -sh .
+```
+
+Observation:
+The `du -sh` command displayed the total storage used by the current directory. It provides a quick summary of directory size.
+
+
+
+4. Inode Utilization
+
+Command
+
+```bash
+df -i
+```
+
+Observation:
+The `df -i` command displayed inode usage for each mounted file system. The available inodes indicated that the system can still create many additional files.
+
+
+
+5. Storage Health Observations
+
+* Storage devices were detected successfully.
+* Mounted file systems were functioning normally.
+* Disk usage was within acceptable limits.
+* Inode utilization was low, indicating sufficient capacity for additional files.
+* No immediate storage issues were observed.
+
+
+
+6. Recommendations
+
+* Regularly monitor disk usage using `df -h`.
+* Remove unnecessary files to free storage space.
+* Archive large files that are no longer required.
+* Monitor inode usage periodically, especially on systems with many small files.
+* Schedule regular storage health checks to prevent unexpected storage shortages.
