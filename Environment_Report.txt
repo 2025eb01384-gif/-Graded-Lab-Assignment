@@ -1,0 +1,92 @@
+Linux Environment Verification Report
+
+Name: Vrati Sagar Surana
+Roll No.: 01384
+
+
+
+1. Username and Groups Associated with the Account
+
+
+Command:
+id
+
+Output:
+uid=1000(adminvratisurana)
+gid=1000(adminvratisurana)
+groups=1000(adminvratisurana),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users)
+
+Observation:
+• The id command displays the current user's UID, GID, and group memberships.
+• The username is adminvratisurana.
+• The user belongs to several groups including sudo, adm, plugdev, and users.
+• These groups determine the user's access permissions.
+
+
+
+2. Current Shell Being Used
+
+
+Command:
+echo $SHELL
+
+Output:
+/bin/bash
+
+Observation:
+• The current shell is Bash.
+• Bash is the default command interpreter in Linux.
+• It allows users to execute commands and shell scripts.
+• The shell acts as an interface between the user and the operating system.
+
+
+
+3. Current Working Directory
+
+Command:
+pwd
+
+Output:
+/mnt/c/Users/admin/vratisurana
+
+Observation:
+• The pwd command displays the current working directory.
+• The current directory is located on the Windows C: drive through WSL.
+• WSL enables Linux to access Windows files.
+• This command helps users know their current location.
+
+
+
+4. List of Files and Directories
+
+Command:
+ls -la
+
+Output:
+total 0
+drwxrwxrwx 1 root root ...
+drwxrwxrwx 1 root root ...
+
+Observation:
+• The ls -la command lists all files and directories.
+• It also displays hidden files, permissions, ownership, and file sizes.
+• The current directory is mostly empty.
+• This command helps verify workspace contents.
+
+
+
+5. Network Connectivity Verification
+
+Command:
+ping -c 4 google.com
+
+Output:
+4 packets transmitted
+4 packets received
+0% packet loss
+
+Observation:
+• The ping command verifies network connectivity.
+• Four packets were successfully transmitted and received.
+• There was no packet loss.
+• The system has a stable internet connection.
