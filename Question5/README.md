@@ -60,3 +60,4 @@ vi Storage_Assessment_Report.txt
 ```
 
 **Explanation:** Opened the `vi` editor to create and save the storage assessment report.
+
